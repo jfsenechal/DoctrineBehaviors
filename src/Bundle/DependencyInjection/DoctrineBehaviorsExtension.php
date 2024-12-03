@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 final class DoctrineBehaviorsExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $phpFileLoader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../../../config'));
         $phpFileLoader->load('services.php');
